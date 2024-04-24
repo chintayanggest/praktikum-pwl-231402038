@@ -14,9 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home',[
-        'task1' => 'Olahraga',
-        'task2' => 'Tidur'
-        'user' => 'login'
-    ]);
+    return view('home');
 });
