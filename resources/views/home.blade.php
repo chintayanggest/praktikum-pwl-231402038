@@ -57,9 +57,13 @@
         <div class="tooltip" data-tip="Edit">
           <button class="btn btn-sm shadow-lg bg-yellow-500">Edit</button>
         </div>
-        <div class="tooltip" data-tip="Selesai">
-          <button class="btn btn-sm btn-success">Done</button>
-        </div>
+            <form action="/{{ $task->slug }}" method="post" >
+            @method('delete')
+            @csrf
+            <div class="tooltip" data-tip="Selesai">
+          <button class="btn btn-sm btn-success onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Task Ini?')">Done</button>
+            </div>
+            </form>
       </div>
     </div>
     {{-- akhir task 2 --}}
